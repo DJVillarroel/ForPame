@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Playfair+Display&display=swap");
+
+html {
+  margin: 0;
+  font-family: "Caveat", cursive;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #7e7ebd;
+}
+
+h1 {
+  color: #ebebeb;
+  text-shadow: 4px 4px 0px #606094;
+}
+
+.marco {
+  border: 10px solid #453873;
+  border-radius: 15%;
+  background-color: #453873;
+  box-shadow: 10px 10px 20px #606094;
+  max-width: 40%;
+}
+
+.marco img {
+  width: 100%;
+  height: auto;
+  border-radius: 15%;
+}
+
+.yes-text {
+  display: none;
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #655897;
+  border-radius: 15px;
+  color: #ebebeb;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 20px;
+  transition: 0.5ms;
+}
+
+.buttons {
+  margin-top: 50px;
+}
+
+button {
+  margin: 20px;
+  border: 0px;
+  box-shadow: 5px 5px 0px #606094;
+  font-family: "Caveat", cursive;
+  font-size: large;
+  font-weight: 400;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #453873;
+  color: #ebebeb;
+}
+
+button:hover {
+  background-color: #a3a3eb;
+}
+
+button:active {
+  background-color: #c4c4fc;
+}

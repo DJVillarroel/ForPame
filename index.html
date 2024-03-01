@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Can we fix this?😔</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>¿Podemos arreglar esto?</h1>
+    <div class="marco">
+      <img
+        src="img/namixjhin.jpg"
+        width="400"
+        height="100%"
+        alt="Nami y Jhin"
+      />
+    </div>
+    <div class="buttons">
+      <button id="si">Sí 🥰</button>
+      <button id="intocable">No, perdón😔</button>
+    </div>
+    <div class="yes-text" id="text">
+      Si realmente crees que sí, te lo agradecería mucho. ¿Podrías hacérmelo
+      saber? Me tomaré el tiempo que necesites, pero saberlo me dará
+      tranquilidad. Muchas gracias...
+    </div>
+    <script>
+      const btns = document.querySelectorAll(".buttons button");
+      const btn = document.getElementById("intocable");
+      const yes = document.getElementById("si");
+      const text = document.getElementById("text");
+
+      let moved = 0;
+
+      btn.addEventListener("mouseenter", () => {
+        moveButton();
+      });
+
+      btn.addEventListener("touchstart", () => {
+        moveButton();
+      });
+
+      yes.addEventListener("touchstart", () => {
+        sheSaidYes();
+      });
+
+      function sheSaidYes() {
+        btns.forEach((btn) => {
+          btn.style.display = "none"; // Ocultar los botones
+        });
+
+        text.style.display = "flex";
+      }
+
+      function moveButton() {
+        const newX = Math.random() * (window.innerWidth - btn.offsetWidth);
+        const newY = Math.random() * (window.innerHeight - btn.offsetHeight);
+
+        btn.style.position = "absolute";
+        btn.style.left = newX + "px";
+        btn.style.top = newY + "px";
+        moved++;
+
+        if (moved > 2) {
+          btn.innerText = "Di que sí, pls 🥺";
+        }
+        if (moved > 6) {
+          btn.innerText = "¿Estás segura de que no? 😪";
+        }
+        if (moved > 10) {
+          btn.innerText = "Ya, lo siento mucho, hice lo que pude.";
+        }
+        if (moved > 50) {
+          btn.innerText =
+            "No espero que veas esto, pero bueno, te adoro con toda mi vida y gracias por haber estado.";
+        }
+      }
+    </script>
+  </body>
+</html>
